@@ -1,0 +1,37 @@
+No.1
+Page 30
+Section3.3
+
+Code:
+x = 0.2
+epsilon = 0.01
+step = epsilon ** 2
+numGuesses = 0
+ans = 0.0
+while abs(ans**2 - x) >= epsilon and ans*ans <= x:   
+    ans += step
+    numGuesses += 1
+print('numGuesses = ', numGuesses)
+if abs(ans**2 - x )>= epsilon:
+    
+    print('Failed on square root of', x)
+else:
+    print(ans,'is close to square root of', x)
+    
+        
+Comment:    
+    
+"... the program will execute while loop at most x/step times"
+"x/step" times is wrong, should be changed to "ans/step" times.
+
+Example: x=0.25, epsilon=0.01, step = 0.01**2 =0.0001
+
+run results:
+numGuesses =  4899
+0.48989999999996237 is close to square root of 0.25
+
+
+numGuesses = 4899
+x/step = 0.25/0.0001 = 2500 < 4899
+
+ans/step= 0.5/0.0001 = 5000 > 4899 and 5000 is close to 4899,the expression ans/step also makes more sense.
