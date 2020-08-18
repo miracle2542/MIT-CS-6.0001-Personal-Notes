@@ -1,1 +1,3 @@
 # MIT-CS-6.0001-Personal-Notes
+
+This file includes my personal notes of the typo I found in the textbook...
